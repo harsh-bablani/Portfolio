@@ -18,16 +18,16 @@ class PremiumResume {
     setupThemeToggle() {
         const themeToggle = document.getElementById('themeToggle');
         const currentTheme = localStorage.getItem('theme') || 'dark';
-        
+
         document.body.setAttribute('data-theme', currentTheme);
-        
+
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.body.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
+
             document.body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            
+
             // Add ripple effect
             this.createRipple(themeToggle, event);
         });
@@ -37,21 +37,21 @@ class PremiumResume {
     setupNavigation() {
         const navItems = document.querySelectorAll('.nav-item');
         const sections = document.querySelectorAll('.section');
-        
+
         // Smooth scrolling
         navItems.forEach(item => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = item.getAttribute('href').substring(1);
                 const targetSection = document.getElementById(targetId);
-                
+
                 if (targetSection) {
                     targetSection.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
                 }
-                
+
                 // Update active nav item
                 navItems.forEach(nav => nav.classList.remove('active'));
                 item.classList.add('active');
@@ -91,9 +91,9 @@ class PremiumResume {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
-                    
+
                     // Add stagger effect for grid items
-                    if (entry.target.classList.contains('skill-category') || 
+                    if (entry.target.classList.contains('skill-category') ||
                         entry.target.classList.contains('project-card') ||
                         entry.target.classList.contains('achievement-card')) {
                         const delay = Array.from(entry.target.parentNode.children).indexOf(entry.target) * 100;
@@ -123,18 +123,18 @@ class PremiumResume {
             'Problem Solver',
             'Innovation Driver'
         ];
-        
+
         let titleIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
-        
+
         const typeSpeed = 100;
         const deleteSpeed = 50;
         const pauseTime = 2000;
-        
+
         const type = () => {
             const currentTitle = titles[titleIndex];
-            
+
             if (isDeleting) {
                 typingElement.textContent = currentTitle.substring(0, charIndex - 1);
                 charIndex--;
@@ -142,9 +142,9 @@ class PremiumResume {
                 typingElement.textContent = currentTitle.substring(0, charIndex + 1);
                 charIndex++;
             }
-            
+
             let speed = isDeleting ? deleteSpeed : typeSpeed;
-            
+
             if (!isDeleting && charIndex === currentTitle.length) {
                 speed = pauseTime;
                 isDeleting = true;
@@ -152,10 +152,10 @@ class PremiumResume {
                 isDeleting = false;
                 titleIndex = (titleIndex + 1) % titles.length;
             }
-            
+
             setTimeout(type, speed);
         };
-        
+
         type();
     }
 
@@ -164,13 +164,13 @@ class PremiumResume {
         const createFloatingShape = () => {
             const shape = document.createElement('div');
             shape.className = 'floating-particle';
-            
+
             // Random properties
             const size = Math.random() * 6 + 2;
             const left = Math.random() * 100;
             const animationDuration = Math.random() * 20 + 10;
             const delay = Math.random() * 5;
-            
+
             shape.style.cssText = `
                 position: absolute;
                 width: ${size}px;
@@ -184,9 +184,9 @@ class PremiumResume {
                 animation-delay: ${delay}s;
                 pointer-events: none;
             `;
-            
+
             document.querySelector('.floating-shapes').appendChild(shape);
-            
+
             // Remove after animation
             setTimeout(() => {
                 if (shape.parentNode) {
@@ -194,7 +194,7 @@ class PremiumResume {
                 }
             }, (animationDuration + delay) * 1000);
         };
-        
+
         // Add CSS for float animation
         const style = document.createElement('style');
         style.textContent = `
@@ -216,7 +216,7 @@ class PremiumResume {
             }
         `;
         document.head.appendChild(style);
-        
+
         // Create particles periodically
         setInterval(createFloatingShape, 2000);
     }
@@ -224,33 +224,33 @@ class PremiumResume {
     // Scroll Effects
     setupScrollEffects() {
         let ticking = false;
-        
+
         const updateScrollEffects = () => {
             const scrolled = window.pageYOffset;
             const rate = scrolled * -0.5;
-            
+
             // Parallax effect for hero background
             const hero = document.querySelector('.hero-section');
             if (hero) {
                 hero.style.transform = `translateY(${rate * 0.3}px)`;
             }
-            
+
             // Update scroll indicator
             const scrollIndicator = document.querySelector('.scroll-indicator');
             if (scrollIndicator) {
                 scrollIndicator.style.opacity = scrolled > 100 ? '0' : '1';
             }
-            
+
             ticking = false;
         };
-        
+
         const requestScrollUpdate = () => {
             if (!ticking) {
                 requestAnimationFrame(updateScrollEffects);
                 ticking = true;
             }
         };
-        
+
         window.addEventListener('scroll', requestScrollUpdate);
     }
 
@@ -279,16 +279,16 @@ class PremiumResume {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                
+
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
-                
+
                 const rotateX = (y - centerY) / 10;
                 const rotateY = (centerX - x) / 10;
-                
+
                 card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
             });
-            
+
             card.addEventListener('mouseleave', () => {
                 card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
             });
@@ -300,20 +300,11 @@ class PremiumResume {
             link.addEventListener('mouseenter', () => {
                 link.style.transform = 'translateY(-5px) scale(1.1)';
             });
-            
+
             link.addEventListener('mouseleave', () => {
                 link.style.transform = 'translateY(0) scale(1)';
             });
         });
-
-        // Download resume button
-        const downloadBtn = document.querySelector('.cta-button.primary');
-        if (downloadBtn) {
-            downloadBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.showNotification('Resume download will be available soon!', 'info');
-            });
-        }
 
         // View projects button
         const projectsBtn = document.querySelector('.cta-button.secondary');
@@ -334,7 +325,7 @@ class PremiumResume {
         const size = Math.max(rect.width, rect.height);
         const x = event.clientX - rect.left - size / 2;
         const y = event.clientY - rect.top - size / 2;
-        
+
         ripple.style.cssText = `
             position: absolute;
             width: ${size}px;
@@ -348,11 +339,11 @@ class PremiumResume {
             pointer-events: none;
             z-index: 1000;
         `;
-        
+
         element.style.position = 'relative';
         element.style.overflow = 'hidden';
         element.appendChild(ripple);
-        
+
         setTimeout(() => {
             if (ripple.parentNode) {
                 ripple.parentNode.removeChild(ripple);
@@ -364,7 +355,7 @@ class PremiumResume {
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
         notification.textContent = message;
-        
+
         notification.style.cssText = `
             position: fixed;
             top: 2rem;
@@ -378,13 +369,13 @@ class PremiumResume {
             transform: translateX(100%);
             transition: transform 0.3s ease;
         `;
-        
+
         document.body.appendChild(notification);
-        
+
         setTimeout(() => {
             notification.style.transform = 'translateX(0)';
         }, 100);
-        
+
         setTimeout(() => {
             notification.style.transform = 'translateX(100%)';
             setTimeout(() => {
@@ -420,7 +411,7 @@ window.addEventListener('load', () => {
     criticalImages.forEach(img => {
         img.src = img.dataset.src;
     });
-    
+
     // Add loaded class for additional animations
     document.body.classList.add('loaded');
 });

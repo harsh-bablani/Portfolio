@@ -666,10 +666,6 @@ function App() {
                     <i className="fab fa-github"></i>
                     <span>View Code</span>
                   </a>
-                  <a href="https://portfolio-three-opal-jqixh576gg.vercel.app/" className="project-link" target="_blank" rel="noopener noreferrer">
-                    <i className="fas fa-external-link-alt"></i>
-                    <span>Live Demo</span>
-                  </a>
                 </div>
               </div>
             </div>

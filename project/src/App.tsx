@@ -337,6 +337,65 @@ function App() {
                 </div>
               </div>
             </div>
+
+            <div className="experience-item">
+              <div className="experience-dot"></div>
+              <div className="experience-card">
+                <div className="card-glow"></div>
+                <div className="experience-content">
+                  <div className="experience-header">
+                    <h3>Front End Developer Intern</h3>
+                    <span className="duration">Feb 2024 - Mar 2025</span>
+                  </div>
+                  <h4>Bharat Intern</h4>
+                  <p className="location">Remote</p>
+                  <ul className="experience-details">
+                    <li>Worked as a Front End Developer Intern, building responsive and interactive web applications.</li>
+                    <li>Collaborated with team members to deliver high-quality UI/UX solutions.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="experience-item">
+              <div className="experience-dot"></div>
+              <div className="experience-card">
+                <div className="card-glow"></div>
+                <div className="experience-content">
+                  <div className="experience-header">
+                    <h3>Intern</h3>
+                    <span className="duration">October 2024 - November 2024</span>
+                  </div>
+                  <h4>Tata Consultancy Services</h4>
+                  <p className="location">Remote</p>
+                  <ul className="experience-details">
+                    <li>Completed the Tata Data Visualization simulation, creating visuals and client meeting questions to support senior leadership and executive decision-making.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="experience-item">
+              <div className="experience-dot"></div>
+              <div className="experience-card">
+                <div className="card-glow"></div>
+                <div className="experience-content">
+                  <div className="experience-header">
+                    <h3>Machine Learning Trainee</h3>
+                    <span className="duration">Jun 2023</span>
+                  </div>
+                  <h4>Agmenz Automation Private Limited</h4>
+                  <p className="location">Bengaluru, Karnataka, India (Remote)</p>
+                  <ul className="experience-details">
+                    <li>Developed a predictive model for loan approval using machine learning algorithms.</li>
+                    <li>Preprocessed data, handled missing values, and converted categorical variables.</li>
+                    <li>Evaluated model using accuracy, precision, recall, and F1-score.</li>
+                    <li>Deployed the model for predictions on new, unseen data.</li>
+                    <li>Applied skills in machine learning, data preprocessing, and model evaluation.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

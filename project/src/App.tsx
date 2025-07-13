@@ -680,6 +680,18 @@ function App() {
                 <p>Worked as Team Lead in Air India Show 2023 and managed the VIP entrance during the Show.</p>
               </div>
             </div>
+
+            <div className="achievement-card">
+              <div className="card-glow"></div>
+              <div className="achievement-content">
+                <div className="achievement-icon">
+                  <i className="fas fa-laptop-code"></i>
+                </div>
+                <h3>Stack Fusion Fest – Hackathon Participation</h3>
+                <h4>REVA University</h4>
+                <p>Selected as one of the Top 5 finalists in a 24-hour hackathon organized by the School of Computer Science and Engineering, Full Stack Development Club, REVA University in April 2025.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

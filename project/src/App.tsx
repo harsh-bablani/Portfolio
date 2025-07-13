@@ -643,6 +643,86 @@ function App() {
                 </div>
               </div>
             </div>
+
+            <div className="project-card">
+              <div className="card-glow"></div>
+              <div className="project-icon">
+                <i className="fas fa-briefcase"></i>
+              </div>
+              <div className="project-content">
+                <h3>Portfolio Website</h3>
+                <div className="project-tech">
+                  <span>React.js</span>
+                  <span>Vite</span>
+                  <span>TypeScript</span>
+                  <span>Tailwind CSS</span>
+                  <span>Vercel</span>
+                </div>
+                <p className="project-description">
+                  A modern, responsive personal portfolio website to showcase my projects, experience, and achievements. Built with React, Vite, and Tailwind CSS, and deployed on Vercel.
+                </p>
+                <div className="project-links">
+                  <a href="https://github.com/harsh-bablani/Portfolio.git" className="project-link" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-github"></i>
+                    <span>View Code</span>
+                  </a>
+                  <a href="https://portfolio-three-opal-jqixh576gg.vercel.app/" className="project-link" target="_blank" rel="noopener noreferrer">
+                    <i className="fas fa-external-link-alt"></i>
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="card-glow"></div>
+              <div className="project-icon">
+                <i className="fas fa-comments"></i>
+              </div>
+              <div className="project-content">
+                <h3>AI ChatBot</h3>
+                <div className="project-tech">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Node.js</span>
+                </div>
+                <p className="project-description">
+                  A floating AI-powered chatbot designed for seamless customer assistance on any website. Features customizable UI, smart responses, and easy integration.
+                </p>
+                <div className="project-links">
+                  <a href="https://github.com/harsh-bablani/ChatBot.git" className="project-link" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-github"></i>
+                    <span>View Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="card-glow"></div>
+              <div className="project-icon">
+                <i className="fas fa-brain"></i>
+              </div>
+              <div className="project-content">
+                <h3>LearnChain-AI</h3>
+                <div className="project-tech">
+                  <span>TypeScript</span>
+                  <span>JavaScript</span>
+                  <span>AI</span>
+                  <span>Mentorship</span>
+                </div>
+                <p className="project-description">
+                  An AI-powered mentorship and learning platform, leveraging modern web technologies to connect learners with AI mentors and resources for personalized growth.
+                </p>
+                <div className="project-links">
+                  <a href="https://github.com/harsh-bablani/LearnChain-AI.git" className="project-link" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-github"></i>
+                    <span>View Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

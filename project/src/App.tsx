@@ -448,6 +448,24 @@ function App() {
                 </div>
               </div>
             </div>
+
+            <div className="skill-category">
+              <div className="category-card">
+                <div className="card-glow"></div>
+                <div className="category-icon">
+                  <i className="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Coursework</h3>
+                <div className="skill-tags">
+                  <span className="skill-tag">Data Structures</span>
+                  <span className="skill-tag">Algorithms</span>
+                  <span className="skill-tag">OOP</span>
+                  <span className="skill-tag">Operating Systems</span>
+                  <span className="skill-tag">DevOps</span>
+                  <span className="skill-tag">Machine Learning</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

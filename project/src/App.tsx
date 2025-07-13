@@ -168,7 +168,7 @@ function App() {
             <div className="profile-card">
               <div className="profile-image-container">
                 <div className="profile-image">
-                  <img src="/src/assets/Profile.jpg" alt="Harsh Bablani" className="profile-photo" />
+                  <img src="/Profile.jpg" alt="Harsh Bablani" className="profile-photo" />
                   <div className="profile-ring"></div>
                   <div className="profile-glow"></div>
                 </div>
@@ -208,7 +208,7 @@ function App() {
                 </div>
 
                 <div className="hero-actions">
-                  <a className="cta-button primary" href="/src/assets/SDE_Harsh Bablani Resume.pdf" download>
+                  <a className="cta-button primary" href="/SDE_Harsh Bablani Resume.pdf" download>
                     <span>Download Resume</span>
                     <i className="fas fa-download"></i>
                   </a>

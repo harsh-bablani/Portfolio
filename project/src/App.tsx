@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   const [theme, setTheme] = useState('dark');
   const [activeSection, setActiveSection] = useState('hero');
+  const [showResumeMsg, setShowResumeMsg] = useState(false);
 
   useEffect(() => {
     // Theme toggle functionality
@@ -106,8 +107,24 @@ function App() {
     };
   }, [theme]);
 
+  const handleResumeClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setShowResumeMsg(true);
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    setTimeout(() => setShowResumeMsg(false), 2500);
+  };
+
   return (
     <>
+      {showResumeMsg && (
+        <div className="resume-popup">
+          <i className="fas fa-check-circle"></i>
+          Contact for resume
+        </div>
+      )}
       {/* Animated Background */}
       <div className="animated-bg">
         <div className="floating-shapes"></div>
@@ -208,10 +225,10 @@ function App() {
                 </div>
 
                 <div className="hero-actions">
-                  <a className="cta-button primary" href="/SDE_Harsh Bablani Resume.pdf" download>
+                  <button className="cta-button primary" onClick={handleResumeClick}>
                     <span>Download Resume</span>
                     <i className="fas fa-download"></i>
-                  </a>
+                  </button>
                   <button className="cta-button secondary">
                     <span>View Projects</span>
                     <i className="fas fa-arrow-right"></i>

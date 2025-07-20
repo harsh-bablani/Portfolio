@@ -28,7 +28,7 @@ class PremiumResume {
             document.body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
 
-            // Add ripple effect
+            // Add ripple effects
             this.createRipple(themeToggle, event);
         });
     }

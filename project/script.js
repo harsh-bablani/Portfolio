@@ -14,7 +14,7 @@ class PremiumResume {
         this.setupInteractiveElements();
     }
 
-    // Theme Toggle
+    // Theme Toggles
     setupThemeToggle() {
         const themeToggle = document.getElementById('themeToggle');
         const currentTheme = localStorage.getItem('theme') || 'dark';
